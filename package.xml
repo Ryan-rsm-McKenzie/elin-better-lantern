@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Meta>
+  <title>Better Lantern Light Radius</title>
+  <id>ryan.elinbetterlantern</id>
+  <author>Ryan</author>
+  <builtin>false</builtin>
+  <loadPriority>100</loadPriority>
+  <version>0.23.50</version>
+  <tags>QoL</tags>
+  <description />
+</Meta>
