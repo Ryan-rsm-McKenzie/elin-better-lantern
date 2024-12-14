@@ -1,6 +1,5 @@
 ﻿#pragma warning disable CA1812 // Avoid uninstantiated internal classes
 
-
 using BepInEx;
 using System.Collections.Generic;
 using HarmonyLib;
@@ -9,7 +8,7 @@ using System;
 
 namespace ElinConvenientCharges;
 
-[BepInPlugin("0B5DECC2-16E9-4CBB-ACC5-EC3F3143A697", "elinbetterlantern", "1.0")]
+[BepInPlugin("0B5DECC2-16E9-4CBB-ACC5-EC3F3143A697", "elinbetterlantern", "1.1")]
 internal sealed class Mod : BaseUnityPlugin
 {
 	private static Harmony? s_harmony;
@@ -48,8 +47,8 @@ internal sealed class TraitLightSource_LightRadius
 
 	private static int Detour(TraitLightSource self)
 	{
-		int radius = self.GetParam(1).ToInt();
-		var owner = self.owner;
-		return radius + Math.Max(owner.material.hardness / 10, 0) + owner.encLV + (int)owner.blessedState;
+		int baseRadius = self.GetParam(1).ToInt();
+		var c = self.owner;
+		return Math.Max(c.material.hardness / 10 + c.encLV + (int)c.blessedState, baseRadius);
 	}
 }
