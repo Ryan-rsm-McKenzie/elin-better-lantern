@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <Target Name="CopyFiles" AfterTargets="PostBuildEvent">
-    <Copy SourceFiles="package.xml" DestinationFolder="$(ElinGamePath)\Package\Mod_$(AssemblyName)\" />
+    <Copy SourceFiles="package.xml;preview.jpg" DestinationFolder="$(ElinGamePath)\Package\Mod_$(AssemblyName)\" />
   </Target>
 
   <ItemGroup>

@@ -7,5 +7,11 @@
   <loadPriority>100</loadPriority>
   <version>0.23.50</version>
   <tags>QoL</tags>
-  <description />
+  <description>Modifies the lantern so the light radius scales with the hardness of the material used.
+
+The formula is:
+
+radius = max(material hardness / 10 + enchantment level + blessing bonus, base light radius)
+
+Safe to add/remove mid-save.</description>
 </Meta>
